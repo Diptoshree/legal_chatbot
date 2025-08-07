@@ -101,7 +101,7 @@ def ask_gemini(document_text, question):
     """Sends the extracted text and question to Gemini API."""
     prompt = f"""
     You are an AI legal assistant. Based on the following legal document, answer the question in 100-200 words. 
-    The answer should be from the document only.
+    The answer should be from the document only. the document can be in english or hindi. you myst answer in the language, in which the question is asked.
     
     LEGAL DOCUMENT:
     {document_text}
@@ -148,3 +148,4 @@ if document_text:
                 answer = ask_gemini(document_text, question)
             st.subheader("Answer:")
             st.write(answer)
+
